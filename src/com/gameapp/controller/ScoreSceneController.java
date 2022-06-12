@@ -9,6 +9,7 @@ import javafx.scene.control.Button;
 
 /**
  * Voy a documentar ScoreScene 
+ * Creando un clase pública ensayo conmit
  */
 
 public class ScoreSceneController {
