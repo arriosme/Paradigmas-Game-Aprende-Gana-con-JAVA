@@ -1,10 +1,7 @@
-
+//Creación del paquete 
 package com.gameapp.controller;
-/**
- * Documentación por Adriana si yo voy a documentar esta parte
- * estoy ensayando documentar mi código y lo voy aprender todo con
- * la documentación de java
- */
+
+// Importación de las librerias
 import com.gameapp.utility.ConstantsUtility;
 import com.gameapp.utility.MessageUtility;
 import javafx.event.ActionEvent;
@@ -13,22 +10,37 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
-/**
- * Voy a documentar como va a funcionar el control del puntaje 
+/** 
+ * Public Pública, 
+ * class clase, 
+ * LoginSceneController nombre que le estamos dando a la clase que contrendra 
+ * la primera pantalla de nuestro juego donde se podra loguear el jugador
+ *   
  */
-
 public class LoginSceneController {
 
     @FXML
-    private Button startGamebtn;
+    private Button startGamebtn; //Creación del Botón para iniciar el juego
 
     @FXML
-    private TextField userNameInput;
+    private TextField userNameInput;//Creación del la caja de texto donde el jugador ingresará su nombre
 
     @FXML
+    /*Método cerrar en este se definen las acciones que se realizarán al presionar el 
+    botón cerrar que estará en la pantalla de inicio del juego*/ 
     private void close(ActionEvent event) {
+        
+        /**MessageUtility.showMessage(Alert.AlertType.INFORMATION indica que se presentara un mensaje de tipo alerta
+        *ConstantsUtility.CLOSE_MESSAGE_TITLE  llamando el mensaje 
+        * "Se cerrará la ventana" que se presentará como titulo en el mensaje de Alerta este mensaje se encuentra definido
+        * en el paquete  com.gameapp.utility en la clase ConstantsUtility.java
+        *ConstantsUtility.CLOSE_MESSAGE_CONTENT llamando el mensaje "Gracias por jugar hasta una proxima ocación" 
+        que se presentara en cuerpo del mensaje de alerta, este mensaje se encuentra definido en el paquete
+        * com.gameapp.utility en la clase ConstantsUtility.java
+        */
         MessageUtility.showMessage(Alert.AlertType.INFORMATION, ConstantsUtility.CLOSE_MESSAGE_TITLE,
                 ConstantsUtility.CLOSE_MESSAGE_CONTENT);
+        //Ejecuta el método salir del sistema
         System.exit(0);
     }
 
