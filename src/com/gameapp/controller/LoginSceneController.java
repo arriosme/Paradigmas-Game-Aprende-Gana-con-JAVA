@@ -1,5 +1,7 @@
 package com.gameapp.controller;
-
+/**
+ * Documentación por Adriana
+ */
 import com.gameapp.utility.ConstantsUtility;
 import com.gameapp.utility.MessageUtility;
 import javafx.event.ActionEvent;
