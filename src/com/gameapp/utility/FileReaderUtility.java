@@ -1,5 +1,7 @@
 package com.gameapp.utility;
-
+/**
+ * Esto lo documentara Juan Kmilo
+ */
 import com.gameapp.model.Question;
 import java.io.BufferedReader;
 import java.io.File;

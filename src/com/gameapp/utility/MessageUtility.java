@@ -1,5 +1,8 @@
 package com.gameapp.utility;
 
+/**
+ * Esto lo documentara Juan Kmilo---MessageUtility.java
+ */
 import javafx.scene.control.Alert;
 
 public class MessageUtility {
