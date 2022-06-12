@@ -7,6 +7,10 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 
+/**
+ * Voy a documentar ScoreScene 
+ */
+
 public class ScoreSceneController {
 
     @FXML
