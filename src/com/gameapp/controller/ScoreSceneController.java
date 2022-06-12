@@ -1,5 +1,8 @@
+/*Creación del paquete, con esta línea indico que la Clase ScoreSceneController
+esta dentro del paquete com.gameapp.controller*/
 package com.gameapp.controller;
 
+// Importación de las librerias
 import com.gameapp.utility.ConstantsUtility;
 import com.gameapp.utility.MessageUtility;
 import javafx.event.ActionEvent;
@@ -7,9 +10,12 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 
-/**
- * Voy a documentar ScoreScene 
- * Creando un clase pública ensayo conmit
+/** 
+ * Public Pública, 
+ * class clase, 
+ * ScoreSceneController nombre que le estamos dando a la clase que contrendra 
+ * la pantalla al finalizar el juego de nuestro juego donde se podra loguear el jugador
+ *   
  */
 
 public class ScoreSceneController {
