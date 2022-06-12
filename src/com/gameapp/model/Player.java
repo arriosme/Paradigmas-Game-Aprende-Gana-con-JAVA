@@ -1,7 +1,7 @@
 package com.gameapp.model;
 
 /**
- *  Esta clase represnta un jugador con los atributos nombre de usuario, puntaje acumulado y última pregunta contestada correctamente
+ * Esta clase represnta un jugador con los atributos nombre de usuario, puntaje acumulado y última pregunta contestada correctamente
  * @author arley
  * @version 2.0
  */
@@ -19,7 +19,10 @@ public class Player {
         this.score = score;
         this.lastIndex = lastIndex;
     }
-
+/**
+ * 
+ * @return 
+ */
     public String getUserName() {
         return userName;
     }
