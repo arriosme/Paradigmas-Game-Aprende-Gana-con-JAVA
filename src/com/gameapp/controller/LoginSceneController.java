@@ -1,4 +1,5 @@
-//Creación del paquete 
+/*Creación del paquete, con esta línea indico que la Clase LoginSceneController
+esta dentro del paquete com.gameapp.controller*/
 package com.gameapp.controller;
 
 // Importación de las librerias
