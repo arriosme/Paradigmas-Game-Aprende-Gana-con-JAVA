@@ -3,6 +3,8 @@ package com.gameapp.utility;
 /**
  * Esto lo documentara Juan Kmilo---MessageUtility.java
  */
+
+//inicio construccion del codigo
 import javafx.scene.control.Alert;
 
 public class MessageUtility {
