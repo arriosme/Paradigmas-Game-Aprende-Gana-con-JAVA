@@ -1,16 +1,18 @@
+/*Creación del paquete, con esta línea indico que la Clase Player
+esta dentro del paquete com.gameapp.model*/
 package com.gameapp.model;
 
 /**
- *  Esta clase represnta un jugador con los atributos nombre de usuario, puntaje acumulado y última pregunta contestada correctamente
- * @author arley
- * @version 2.0
+ *Creación de la clase jugador "public class Player {}"
+ * después de la llave abierta { crearemos sus atributos y métodos y terminaremos al cerrar la llave }
  */
 public class Player {
 
-    /**
-     * 
-     */
+    /*Declarando la variable o atributo userName Nombre de usuario para la clase jugador 
+    String indica que esta variable es de tipo Cadena de caracteres
+    private indica que esta variabel o atribuo es propio o visible solo para la clase jugador*/
     private String userName;
+    
     private float score;
     private int lastIndex;
 
