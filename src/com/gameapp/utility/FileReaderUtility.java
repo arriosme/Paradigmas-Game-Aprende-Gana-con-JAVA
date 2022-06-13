@@ -1,8 +1,7 @@
-package com.gameapp.utility;
-/**
- * Esto lo documentara Juan Kmilo
- */
-import com.gameapp.model.Question;
+package com.gameapp.utility; //Primeramente se  agrega el paquete principal del juego a la clase
+
+//a continuacion se procede con la importacion de distintos paquetes del API de java
+import com.gameapp.model.Question; 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -14,6 +13,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+// se da inicio de forma publica a la clase.
 public class FileReaderUtility {
 
     public static void main(String[] args) throws Exception {
