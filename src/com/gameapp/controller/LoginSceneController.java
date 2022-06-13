@@ -20,13 +20,16 @@ import javafx.scene.control.TextField;
  */
 public class LoginSceneController {
 
-    @FXML
+    @FXML /*@FXML esta anotación indica que el elemento que aparece a continuación está
+    asociado a algún elmento del archivo FXML*/
     private Button startGamebtn; //Creación del Botón para iniciar el juego
 
-    @FXML
+    @FXML /*@FXML esta anotación indica que el elemento que aparece a continuación está
+    asociado a algún elmento del archivo FXML*/
     private TextField userNameInput;//Creación del la caja de texto donde el jugador ingresará su nombre
 
-    @FXML
+    @FXML /*@FXML esta anotación indica que el elemento que aparece a continuación está
+    asociado a algún elmento del archivo FXML*/
     /*Método cerrar en este se definen las acciones que se realizarán al presionar el 
     botón cerrar que estará en la pantalla de inicio del juego*/ 
     private void close(ActionEvent event) {
