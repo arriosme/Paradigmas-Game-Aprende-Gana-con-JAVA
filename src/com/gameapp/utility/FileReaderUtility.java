@@ -1,4 +1,4 @@
-package com.gameapp.utility; //Primeramente se  agrega el paquete principal del juego a la clase
+package com.gameapp.utility; //Primeramente se  agrega el paquete .utility  a la clase
 
 //a continuacion se procede con la importacion de distintos paquetes del API de java
 import com.gameapp.model.Question; 
