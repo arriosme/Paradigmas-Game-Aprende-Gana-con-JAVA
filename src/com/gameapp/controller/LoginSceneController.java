@@ -2,9 +2,13 @@
 esta dentro del paquete com.gameapp.controller*/
 package com.gameapp.controller;
 
-// Importación de las librerias
+// Importación de la clase ConstantsUtility del paquete com.gameapp.utility
 import com.gameapp.utility.ConstantsUtility;
+
+// Importación de la clase MessageUtility del paquete com.gameapp.utility
 import com.gameapp.utility.MessageUtility;
+
+// Importación de las librerias de javafx
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -20,16 +24,19 @@ import javafx.scene.control.TextField;
  */
 public class LoginSceneController {
 
-    @FXML /*@FXML esta anotación indica que el elemento que aparece a continuación está
-    asociado a algún elmento del archivo FXML*/
+    @FXML /*@FXML esta anotación indica que el elemento que aparecerá a continuación en el código está
+    asociado a algún elemento del archivo FXML*/
+    
     private Button startGamebtn; //Creación del Botón para iniciar el juego
 
-    @FXML /*@FXML esta anotación indica que el elemento que aparece a continuación está
-    asociado a algún elmento del archivo FXML*/
+    @FXML /*@FXML esta anotación indica que el elemento que aparecerá a continuación en el código está
+    asociado a algún elemento del archivo FXML*/
+    
     private TextField userNameInput;//Creación del la caja de texto donde el jugador ingresará su nombre
 
-    @FXML /*@FXML esta anotación indica que el elemento que aparece a continuación está
-    asociado a algún elmento del archivo FXML*/
+    @FXML /*@FXML esta anotación indica que el elemento que aparecerá a continuación en el código está
+    asociado a algún elemento del archivo FXML*/
+    
     /*Método cerrar en este se definen las acciones que se realizarán al presionar el 
     botón cerrar que estará en la pantalla de inicio del juego*/ 
     private void close(ActionEvent event) {
