@@ -21,12 +21,31 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+/**
+ * Esta clase es para ejecutar la primer ventana del juego y solicitar nombre de usuario
+ * para ejecutar la primer pregunta
+ * @author Jhonny Zambrano Saavedra
+ * @version 1.0
+*/
+
 public class GameAppMain extends Application {    //La clase GameAppMain hereda atributos y metodos de la clase Application
 
     private Scene main;                           //variable main de tipo Scene, para contener toda la parte grafica
     private Stage primaryStage;                   //variable primaryStage de tipo Stage para almacenar los estilos, fondo, texto etc, de la primer escena
 
     @Override
+    
+    /**
+     * Metodo para cargar la primer pantalla "Menu principal", con captura de errores
+     * @param primaryStage
+     * FXMLLoader carga un objeto de tipo XML, datos almacenados
+     * Cargamos el parametro recibido a nuestra variable primaryStage
+     * Define fondo blanco solido, sin decoraciones
+     * Cargamos el arhivo de la primer escena, la ruta de este archivo esta en la variable ROOT_SCENE, contenida en ConstantsUtility.java
+     * Creamos un objeto tipo Boton para "empezar juego"
+     * Agregamos la funcionalidad al boton
+     * Si se pulsa el boton, llamamos al metodo startGame
+     */
     public void start(Stage primaryStage) throws Exception {     //Metodo start para ejecutar la primer pantalla del juego, captura errores en su ejecucion
         FXMLLoader loader = new FXMLLoader();                    //FXMLLoader carga un objeto de tipo XML, datos almacenados
         this.primaryStage = primaryStage;                        //Cargamos el parametro recibido a nuestra variable primaryStage
@@ -52,6 +71,19 @@ public class GameAppMain extends Application {    //La clase GameAppMain hereda 
         this.primaryStage.setScene(main);     //pasamos el main al escenario principal
         this.primaryStage.show();             //se visualiza
     }
+    
+    
+    /**
+     * Metodo empezar la primer ronda de preguntas
+     * @param event
+     * De nuevo creamos un objeto para cargar XML
+     * Cargamos el valor del campo de texto llamado "userName" donde el usuario debio ingresar su nombre
+     * Comprobamos que la casilla tenga un nombre, que no este vacia
+     * Si no esta vacia entonces cargamos la URL de la segunda pantalla o segunda escena 
+     * Pasamos el nombre del usuario para que se visualice quien esta jugando en todo momento
+     * Se visualiza en pantalla    
+     * Si no se ha ingresado nombre de usuario, entonces se muestra un error en pantalla y no carga la escena 2 
+     */
 
     public void startGame(ActionEvent event) throws IOException {     //Metodo para empezar la ronda de preguntas
 
@@ -75,11 +107,19 @@ public class GameAppMain extends Application {    //La clase GameAppMain hereda 
         }
 
     }
-
+    
+    /**
+     * Metodo getter para consultar la variable 
+     * @return main tipo Scene
+     */
     public Scene getMain() {                        //Metodo getter para obtener el valor de main desde fuera de la clase
         return main;
     }
-
+    
+    /**
+     * Metodo setter para modificar la variable 
+     * @param main recibe tipo Scene
+     */
     public void setMain(Scene main) {              //Metodo setter para modificar el valor de main desde fuera de la clase y controlar lo que se muestra en pantalla
         this.main = main;
     }
