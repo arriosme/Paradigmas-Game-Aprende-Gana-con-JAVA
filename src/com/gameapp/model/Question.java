@@ -1,4 +1,4 @@
-package com.gameapp.model;
+package com.gameapp.model;  //agregamos el paquete general de los archivos del juego
 
 public class Question {
     private int questionIndex;
