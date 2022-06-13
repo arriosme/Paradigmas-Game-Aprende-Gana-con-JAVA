@@ -8,12 +8,19 @@ package com.gameapp.model;
  */
 public class Player {
 
-    /*Declarando la variable o atributo userName Nombre de usuario para la clase jugador 
+    /*Declarando la variable o atributo userName que almacenará el Nombre de usuario jugador 
     String indica que esta variable es de tipo Cadena de caracteres
     private indica que esta variabel o atribuo es propio o visible solo para la clase jugador*/
     private String userName;
     
+    /*Declarando la variable o atributo score que almacenará el Puntaje para el usuario jugador 
+      float indica que esta variable almacenará un número entero con decimales
+    private indica que esta variable o atribuo es propio o visible solo para la clase jugador*/
     private float score;
+    
+    /*Declarando la variable o atributo lastIndex que almacenará el último Puntaje para el usuario jugador 
+      in indica que esta variable almacenará un número entero private indica que esta variable o atributo 
+    es propio o visible solo para la clase jugador*/
     private int lastIndex;
 
     public Player(String userName, float score, int lastIndex) {
