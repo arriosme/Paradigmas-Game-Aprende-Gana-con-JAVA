@@ -129,6 +129,9 @@ public class SecondSceneController implements Initializable {
                 changeQuestion(); // Cambia de pregunta
             }
         } else {
+            /**
+             * Secuencia de acciones que se ejecutan en caso de que la respuesta seleccionada sea incorrecta
+             */
             MessageUtility.showMessage(Alert.AlertType.ERROR,
                     ConstantsUtility.INCORRECT_MESSAGE_TITLE,
                     ConstantsUtility.INCORRECT_MESSAGE_CONTENT + player.getScore() + " puntos");
