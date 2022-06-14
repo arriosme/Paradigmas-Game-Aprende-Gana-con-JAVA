@@ -98,7 +98,7 @@ public class SecondSceneController implements Initializable {
         boolean isCorrect = false; // Variable de verifición de pregunta correcta seleccionada
 
         if (getQuestions().get(getIndexQuestion() - 1).getAnswerIndex() == optionIndex) {
-            isCorrect = true;
+            isCorrect = true; // Se cambia variable de verificación
         }
 
         if (isCorrect) {
