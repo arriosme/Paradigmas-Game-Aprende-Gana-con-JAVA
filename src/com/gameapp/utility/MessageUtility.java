@@ -11,7 +11,7 @@ public class MessageUtility {
 
     public static void showMessage(Alert.AlertType type, String title, String content) {
         Alert alert = new Alert(type); //se crea una nueva variable alert
-        alert.setTitle(title); // se usa la variable alert y se le agrega el metodo .setTittle para asignar un titulo
+        alert.setTitle(title); // se usa la variable alert y se le agrega el metodo .setTittle para asignar un titulo.
         alert.setContentText(content);
         alert.showAndWait();
     }
