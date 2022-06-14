@@ -64,6 +64,9 @@ public class SecondSceneController implements Initializable {
      * 
      * @param event 
      */
+    /*
+     * Cerrar ventana
+     */
     @FXML
     private void close(ActionEvent event) {
         MessageUtility.showMessage(Alert.AlertType.INFORMATION, ConstantsUtility.CLOSE_MESSAGE_TITLE,
@@ -74,6 +77,13 @@ public class SecondSceneController implements Initializable {
      * 
      * @param url
      * @param rb 
+     */
+    /*
+     * Inicializar: 
+     * -Índice 
+     * -Carga de preguntas
+     * -Iniciar puntaje en 0
+     * -Inicia el jugador
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
