@@ -62,13 +62,13 @@ public class Player {//llave de apertura de la Clase Player
     //Método set para modificar el valor del atributo Score sirve para modificar el valor que tiene este atributo
     public void setScore(float score) {//llave de apertura del método setScore()
         this.score = score;
-    }//llave de ciere del método setScore()
+    }//llave de cierre del método setScore()
     
     /*Método get para el atributo LastIndex sirve para mostrar el valor que tiene el atributo ultimo puntaje del jugador
     public es el modificador del método que indica que lo podemos mostrar o modificar desde fuera de la clase*/
     public int getLastIndex() {//llave de apertura del método getLastIndex()
         return lastIndex;
-    }//llave de ciere del método getLastIndex()
+    }//llave de cierre del método getLastIndex()
 
     //Método set para modificar el valor del atributo LastIndex sirve para modificar el valor que tiene este atributo
     public void setLastIndex(int lastIndex) {//llave de apertura del método setLastIndex()
