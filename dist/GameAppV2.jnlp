@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="GameAppV2.jar" size="17348" download="eager" />
+    <jar href="GameAppV2.jar" size="17356" download="eager" />
   </resources>
   <jfx:javafx-desc  width="800" height="600" main-class="com.gameapp.GameAppMain"  name="GameAppV2" />
   <update check="always"/>
