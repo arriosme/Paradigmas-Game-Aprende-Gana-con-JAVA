@@ -109,8 +109,11 @@ public class SecondSceneController implements Initializable {
                                 // En caso de que la respuesta sea correcta, muestra el puntaje parcial
 
             changePlayerScore();
+            /**
+             * Se evalúa si el juego llegó al máximo de preguntas
+             */
             if (getIndexQuestion() == getQuestions().size()) {
-                clear();
+                clear(); // Limpia 
                 endGame();
             } else {
                 setIndexQuestion(getIndexQuestion() + 1);
