@@ -150,9 +150,12 @@ public class SecondSceneController implements Initializable {
         } else {
             setIndexQuestion(getIndexQuestion() + 1);
         }
-        changeQuestion();
+        changeQuestion(); // Cambia la pregunta
     }
 
+    /**
+     * Función para cambiar de pregunta
+     */
     private void changeQuestion() {
         Question tmp = getQuestions().get(getIndexQuestion() - 1);
 
