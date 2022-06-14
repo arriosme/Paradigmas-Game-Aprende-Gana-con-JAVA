@@ -1,5 +1,5 @@
 package com.gameapp.controller;
-/*
+/**
  * Importación de clases requeridas
  */
 import com.gameapp.model.Player;
@@ -113,7 +113,7 @@ public class SecondSceneController implements Initializable {
              * Se evalúa si el juego llegó al máximo de preguntas
              */
             if (getIndexQuestion() == getQuestions().size()) {
-                clear(); // Limpia 
+                clear(); // Limpia las opciones en las preguntas
                 endGame();
             } else {
                 setIndexQuestion(getIndexQuestion() + 1);
