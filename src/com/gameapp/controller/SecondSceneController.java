@@ -141,6 +141,9 @@ public class SecondSceneController implements Initializable {
 
     }
 
+    /**
+     * Función para cargar preguntas desde la dirección de archivo
+     */
     private void loadQuestions() {
         if (getQuestions() == null) {
             setQuestions(util.loadQuestions(ConstantsUtility.QUESTIONS_FILE_PATH));
