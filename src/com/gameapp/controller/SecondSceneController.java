@@ -182,22 +182,37 @@ public class SecondSceneController implements Initializable {
         this.player = player;
     }
 
+    /**
+     * Función que retorna el índice de la pregunta
+     */
     public int getIndexQuestion() {
         return indexQuestion;
     }
 
+    /**
+     * Función para configurar el índice de las preguntas
+     */
     public void setIndexQuestion(int indexQuestion) {
         this.indexQuestion = indexQuestion;
     }
 
+    /**
+     * Función que retorna la lista de preguntas
+     */
     public List<Question> getQuestions() {
         return questions;
     }
 
+    /**
+     * Función para configurar preguntas
+     */
     public void setQuestions(List<Question> questions) {
         this.questions = questions;
     }
 
+    /**
+     * Función limpiadora de opciones de pregunta: Setea todo en 'null'
+     */
     private void clear() {
         option1.setOnAction(null);
         option2.setOnAction(null);
@@ -205,6 +220,9 @@ public class SecondSceneController implements Initializable {
         option4.setOnAction(null);
     }
 
+    /**
+     * Función para declarar por terminada la partida
+     */
     private void endGame() {
         clear(); // Limpia las opciones en las preguntas
         URL url;
