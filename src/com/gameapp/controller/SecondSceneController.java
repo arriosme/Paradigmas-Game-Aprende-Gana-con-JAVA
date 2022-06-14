@@ -196,6 +196,9 @@ public class SecondSceneController implements Initializable {
         score.setText(player.getScore() + ""); // Configura nuevo valor en Vista puntos
     }
 
+    /**
+     * Geter de player
+     */
     public Player getPlayer() {
         return player;
     }
