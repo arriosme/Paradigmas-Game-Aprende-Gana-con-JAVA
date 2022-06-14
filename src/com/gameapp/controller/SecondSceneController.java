@@ -178,6 +178,9 @@ public class SecondSceneController implements Initializable {
         return player;
     }
 
+    /**
+     * Función para configurar el jugador
+     */
     public void setPlayer(Player player) {
         this.player = player;
     }
