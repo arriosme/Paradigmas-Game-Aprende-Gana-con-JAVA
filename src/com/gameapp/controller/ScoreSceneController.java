@@ -18,7 +18,7 @@ import javafx.scene.control.Button;
  * Public Pública, 
  * class clase, 
  * ScoreSceneController nombre que le estamos dando a la clase que contrendra 
- * la pantalla al finalizar el juego de nuestro juego donde se podra loguear el jugador
+ * la pantalla de inicio el juego donde se podra loguear cada jugador
  *   
  */
 public class ScoreSceneController {
@@ -37,13 +37,12 @@ public class ScoreSceneController {
     private void handleButtonAction(ActionEvent event) {
         
         /**MessageUtility.showMessage(Alert.AlertType.INFORMATION indica que se presentara un mensaje de tipo alerta
-        *ConstantsUtility.CLOSE_MESSAGE_TITLE  llamando el mensaje 
-        * "Se cerrará la ventana" que se presentará como titulo en el mensaje de Alerta este mensaje se encuentra definido
-        * en el paquete  com.gameapp.utility en la clase ConstantsUtility.java
-        *ConstantsUtility.CLOSE_MESSAGE_CONTENT llamando el mensaje "Gracias por jugar hasta una proxima ocación" 
-        que se presentara en cuerpo del mensaje de alerta, este mensaje se encuentra definido en el paquete
-        * com.gameapp.utility en la clase ConstantsUtility.java
-        */
+            * ConstantsUtility.CLOSE_MESSAGE_TITLE  llamando el mensaje 
+            * "Se cerrará la ventana" que se presentará como titulo en el mensaje de Alerta este mensaje se encuentra definido
+            * en el paquete  com.gameapp.utility en la clase ConstantsUtility.java
+            * ConstantsUtility.CLOSE_MESSAGE_CONTENT llamando el mensaje "Gracias por jugar hasta una proxima ocación" 
+            * que se presentara en cuerpo del mensaje de alerta, este mensaje se encuentra definido en el paquete
+            * com.gameapp.utility en la clase ConstantsUtility.java*/
         MessageUtility.showMessage(Alert.AlertType.INFORMATION, ConstantsUtility.CLOSE_MESSAGE_TITLE,
                 ConstantsUtility.CLOSE_MESSAGE_CONTENT);
         
