@@ -1,6 +1,6 @@
 package com.gameapp.controller;
 /**
- * Documentar por Antony
+ * Recibido!: Por Antony
  */
 import com.gameapp.model.Player;
 import com.gameapp.model.Question;
