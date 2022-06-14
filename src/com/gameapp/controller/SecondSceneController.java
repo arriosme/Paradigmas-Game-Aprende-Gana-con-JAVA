@@ -1,6 +1,6 @@
 package com.gameapp.controller;
-/**
- * Recibido!: Por Antony
+/*
+ * Importación de clases requeridas
  */
 import com.gameapp.model.Player;
 import com.gameapp.model.Question;
@@ -26,36 +26,39 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+/*
+ * Creación de la clase para los controles visuales
+ */
 public class SecondSceneController implements Initializable {
 
     @FXML
-    private Label userNameLabel;
+    private Label userNameLabel; // Interfaz gráfica: Etiqueta de nombre de usuario
 
     @FXML
-    private Label score;
+    private Label score; // Interfaz gráfica: Etiqueta de puntaje
 
     @FXML
-    private Label questionTxt;
+    private Label questionTxt; // Interfaz gráfica: Etiqueta de pregunta
 
     @FXML
-    private Label index;
+    private Label index; // Interfaz gráfica: Etiqueta de índice
 
     @FXML
-    private Button option1;
+    private Button option1; // Interfaz gráfica: Botón de respuesta 1
 
     @FXML
-    private Button option2;
+    private Button option2; // Interfaz gráfica: Botón de respuesta 2
 
     @FXML
-    private Button option3;
+    private Button option3; // Interfaz gráfica: Botón de respuesta 3
 
     @FXML
-    private Button option4;
+    private Button option4; // Interfaz gráfica: Botón de respuesta 4
 
-    private Player player;
-    private int indexQuestion;
-    private List<Question> questions;
-    private FileReaderUtility util;
+    private Player player; // Propiedad de jugador
+    private int indexQuestion; // Índice de pregunta
+    private List<Question> questions; // Arreglo de preguntas
+    private FileReaderUtility util; // lector
 
     /**
      * 
