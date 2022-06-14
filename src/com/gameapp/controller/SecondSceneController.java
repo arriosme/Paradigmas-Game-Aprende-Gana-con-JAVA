@@ -123,7 +123,7 @@ public class SecondSceneController implements Initializable {
                  * Secuencia de acciones para continuar con la siguiente pregunta
                  */
                 setIndexQuestion(getIndexQuestion() + 1); // Aumenta el índice en 1, pasa a siguiente pregunta
-                changeQuestion();
+                changeQuestion(); // Cambia de pregunta
             }
         } else {
             MessageUtility.showMessage(Alert.AlertType.ERROR,
