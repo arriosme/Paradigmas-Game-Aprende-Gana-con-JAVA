@@ -15,8 +15,8 @@ public class ConstantsUtility {
     public static final String CORRECT_MESSAGE_TITLE = "Felicitaciones"; // Título de ventana con mensaje de respuesta correcta 
     public static final String CORRECT_MESSAGE_CONTENT = "Felicitaciones ha ganado "; // Mensaje de respuesta correcta 
 
-    public static final String CLOSE_MESSAGE_TITLE = "Se cerrará la ventana";
-    public static final String CLOSE_MESSAGE_CONTENT = "Gracias por jugar hasta una proxima ocación";
+    public static final String CLOSE_MESSAGE_TITLE = "Se cerrará la ventana"; // Título de ventana con mensaje de cierre
+    public static final String CLOSE_MESSAGE_CONTENT = "Gracias por jugar hasta una proxima ocación"; // Mensaje de cierre
 
     public static final int UMBRAL_HARD_QUESTIONS = 13;
 }
