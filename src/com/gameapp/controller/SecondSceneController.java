@@ -113,10 +113,16 @@ public class SecondSceneController implements Initializable {
              * Se evalúa si el juego llegó al máximo de preguntas
              */
             if (getIndexQuestion() == getQuestions().size()) {
+                /**
+                 * Secuencia de acciones para dar por terminado el juego
+                 */
                 clear(); // Limpia las opciones en las preguntas
-                endGame(); 
+                endGame(); // Termina el juego
             } else {
-                setIndexQuestion(getIndexQuestion() + 1);
+                /**
+                 * Secuencia de acciones para continuar con la siguiente pregunta
+                 */
+                setIndexQuestion(getIndexQuestion() + 1); // Aumenta el 
                 changeQuestion();
             }
         } else {
