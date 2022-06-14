@@ -103,6 +103,9 @@ public class SecondSceneController implements Initializable {
         }
 
         if (isCorrect) {
+            /**
+             * Secuencia de acciones que se ejecutan en caso de que la respuesta seleccionada sea correcta
+             */
             MessageUtility.showMessage(Alert.AlertType.INFORMATION, ConstantsUtility.CORRECT_MESSAGE_TITLE,
                     ConstantsUtility.CORRECT_MESSAGE_CONTENT +
                             getQuestions().get(getIndexQuestion() - 1).getAnswerScore() + " puntos");
