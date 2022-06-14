@@ -114,7 +114,7 @@ public class SecondSceneController implements Initializable {
              */
             if (getIndexQuestion() == getQuestions().size()) {
                 clear(); // Limpia las opciones en las preguntas
-                endGame();
+                endGame(); 
             } else {
                 setIndexQuestion(getIndexQuestion() + 1);
                 changeQuestion();
@@ -206,7 +206,7 @@ public class SecondSceneController implements Initializable {
     }
 
     private void endGame() {
-        clear();
+        clear(); // Limpia las opciones en las preguntas
         URL url;
         try {
             url = new File(ConstantsUtility.SCORE_SCENE).toURI().toURL();
