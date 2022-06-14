@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-// se da inicio de forma publica a la clase.
+// se da inicio de forma publica a la clase
 public class FileReaderUtility {
 
     public static void main(String[] args) throws Exception {
