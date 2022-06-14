@@ -1,7 +1,7 @@
 package com.gameapp.utility;
 
 /**
- * Documentar por Antony
+ * Repositorio de variables globales estáticas.Conjunto de textos requeridos para la ejecución del programa.
  */
 public class ConstantsUtility {
     public static final String QUESTIONS_FILE_PATH = "data/questions.csv";
