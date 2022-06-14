@@ -26,7 +26,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-/*
+/**
  * Creación de la clase para los controles visuales
  */
 public class SecondSceneController implements Initializable {
@@ -64,7 +64,7 @@ public class SecondSceneController implements Initializable {
      * 
      * @param event 
      */
-    /*
+    /**
      * Cerrar ventana
      */
     @FXML
@@ -78,7 +78,7 @@ public class SecondSceneController implements Initializable {
      * @param url
      * @param rb 
      */
-    /*
+    /**
      * Inicializar: 
      * -Índice 
      * -Carga de preguntas
@@ -98,13 +98,16 @@ public class SecondSceneController implements Initializable {
         boolean isCorrect = false; // Variable de verifición de pregunta correcta seleccionada
 
         if (getQuestions().get(getIndexQuestion() - 1).getAnswerIndex() == optionIndex) {
-            isCorrect = true; // Se cambia variable de verificación
+            isCorrect = true;   // Se cambia variable de verificación a verdadero si se
+                                // selecciona la opción completa
         }
 
         if (isCorrect) {
             MessageUtility.showMessage(Alert.AlertType.INFORMATION, ConstantsUtility.CORRECT_MESSAGE_TITLE,
                     ConstantsUtility.CORRECT_MESSAGE_CONTENT +
                             getQuestions().get(getIndexQuestion() - 1).getAnswerScore() + " puntos");
+                                // En caso de que la respuesta sea correcta, muestra el puntaje parcial
+
             changePlayerScore();
             if (getIndexQuestion() == getQuestions().size()) {
                 clear();
