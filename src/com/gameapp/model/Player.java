@@ -2,6 +2,7 @@ package com.gameapp.model;
 
 /**
  *  Esta clase represnta un jugador con los atributos nombre de usuario, puntaje acumulado y última pregunta contestada correctamente
+ * Verificacion con Adriana
  * @author arley
  * @version 2.0
  */
