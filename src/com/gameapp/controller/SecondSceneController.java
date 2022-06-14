@@ -134,7 +134,8 @@ public class SecondSceneController implements Initializable {
              */
             MessageUtility.showMessage(Alert.AlertType.ERROR,
                     ConstantsUtility.INCORRECT_MESSAGE_TITLE,
-                    ConstantsUtility.INCORRECT_MESSAGE_CONTENT + player.getScore() + " puntos");
+                    ConstantsUtility.INCORRECT_MESSAGE_CONTENT + player.getScore() + " puntos"); // Comparte el 
+                        //Puntaje alcanzado
             System.exit(0);// finaliza el programa
         }
 
