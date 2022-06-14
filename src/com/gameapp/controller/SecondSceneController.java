@@ -187,6 +187,9 @@ public class SecondSceneController implements Initializable {
         
     }
 
+    /**
+     * Función para cambiar el puntaje
+     */
     private void changePlayerScore() {
         player.setScore(player.getScore() + getQuestions().get(getIndexQuestion() - 1).getAnswerScore());
         player.setUserName(userNameLabel.getText());
