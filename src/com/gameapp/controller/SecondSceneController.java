@@ -1,5 +1,7 @@
 package com.gameapp.controller;
-
+/**
+ * Importación de clases requeridas
+ */
 import com.gameapp.model.Player;
 import com.gameapp.model.Question;
 import com.gameapp.utility.ConstantsUtility;
@@ -24,40 +26,46 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+/**
+ * Creación de la clase para los controles visuales
+ */
 public class SecondSceneController implements Initializable {
 
     @FXML
-    private Label userNameLabel;
+    private Label userNameLabel; // Interfaz gráfica: Etiqueta de nombre de usuario
 
     @FXML
-    private Label score;
+    private Label score; // Interfaz gráfica: Etiqueta de puntaje
 
     @FXML
-    private Label questionTxt;
+    private Label questionTxt; // Interfaz gráfica: Etiqueta de pregunta
 
     @FXML
-    private Label index;
+    private Label index; // Interfaz gráfica: Etiqueta de índice
 
     @FXML
-    private Button option1;
+    private Button option1; // Interfaz gráfica: Botón de respuesta 1
 
     @FXML
-    private Button option2;
+    private Button option2; // Interfaz gráfica: Botón de respuesta 2
 
     @FXML
-    private Button option3;
+    private Button option3; // Interfaz gráfica: Botón de respuesta 3
 
     @FXML
-    private Button option4;
+    private Button option4; // Interfaz gráfica: Botón de respuesta 4
 
-    private Player player;
-    private int indexQuestion;
-    private List<Question> questions;
-    private FileReaderUtility util;
+    private Player player; // Propiedad de jugador
+    private int indexQuestion; // Índice de pregunta
+    private List<Question> questions; // Arreglo de preguntas
+    private FileReaderUtility util; // lector
 
     /**
      * 
      * @param event 
+     */
+    /**
+     * Cerrar ventana
      */
     @FXML
     private void close(ActionEvent event) {
@@ -70,6 +78,13 @@ public class SecondSceneController implements Initializable {
      * @param url
      * @param rb 
      */
+    /**
+     * Inicializar: 
+     * -Índice 
+     * -Carga de preguntas
+     * -Iniciar puntaje en 0
+     * -Inicia el jugador
+     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         util = new FileReaderUtility();
@@ -80,42 +95,67 @@ public class SecondSceneController implements Initializable {
     }
 
     public void checkOption(int optionIndex) {
-        boolean isCorrect = false;
+        boolean isCorrect = false; // Variable de verifición de pregunta correcta seleccionada
 
         if (getQuestions().get(getIndexQuestion() - 1).getAnswerIndex() == optionIndex) {
-            isCorrect = true;
+            isCorrect = true;   // Se cambia variable de verificación a verdadero si se
+                                // selecciona la opción completa
         }
 
         if (isCorrect) {
+            /**
+             * Secuencia de acciones que se ejecutan en caso de que la respuesta seleccionada sea correcta
+             */
             MessageUtility.showMessage(Alert.AlertType.INFORMATION, ConstantsUtility.CORRECT_MESSAGE_TITLE,
                     ConstantsUtility.CORRECT_MESSAGE_CONTENT +
                             getQuestions().get(getIndexQuestion() - 1).getAnswerScore() + " puntos");
+                                // En caso de que la respuesta sea correcta, muestra el puntaje parcial
+
             changePlayerScore();
+            /**
+             * Se evalúa si el juego llegó al máximo de preguntas
+             */
             if (getIndexQuestion() == getQuestions().size()) {
-                clear();
-                endGame();
+                /**
+                 * Secuencia de acciones para dar por terminado el juego
+                 */
+                clear(); // Limpia las opciones en las preguntas
+                endGame(); // Termina el juego
             } else {
-                setIndexQuestion(getIndexQuestion() + 1);
-                changeQuestion();
+                /**
+                 * Secuencia de acciones para continuar con la siguiente pregunta
+                 */
+                setIndexQuestion(getIndexQuestion() + 1); // Aumenta el índice en 1, pasa a siguiente pregunta
+                changeQuestion(); // Cambia de pregunta
             }
         } else {
+            /**
+             * Secuencia de acciones que se ejecutan en caso de que la respuesta seleccionada sea incorrecta
+             */
             MessageUtility.showMessage(Alert.AlertType.ERROR,
                     ConstantsUtility.INCORRECT_MESSAGE_TITLE,
-                    ConstantsUtility.INCORRECT_MESSAGE_CONTENT + player.getScore() + " puntos");
+                    ConstantsUtility.INCORRECT_MESSAGE_CONTENT + player.getScore() + " puntos"); // Comparte el 
+                        //Puntaje alcanzado
             System.exit(0);// finaliza el programa
         }
 
     }
 
+    /**
+     * Función para cargar preguntas desde la dirección de archivo
+     */
     private void loadQuestions() {
         if (getQuestions() == null) {
             setQuestions(util.loadQuestions(ConstantsUtility.QUESTIONS_FILE_PATH));
         } else {
             setIndexQuestion(getIndexQuestion() + 1);
         }
-        changeQuestion();
+        changeQuestion(); // Cambia la pregunta
     }
 
+    /**
+     * Función para cambiar de pregunta
+     */
     private void changeQuestion() {
         Question tmp = getQuestions().get(getIndexQuestion() - 1);
 
@@ -147,36 +187,60 @@ public class SecondSceneController implements Initializable {
         
     }
 
+    /**
+     * Función para cambiar el puntaje
+     */
     private void changePlayerScore() {
-        player.setScore(player.getScore() + getQuestions().get(getIndexQuestion() - 1).getAnswerScore());
-        player.setUserName(userNameLabel.getText());
-        score.setText(player.getScore() + "");
+        player.setScore(player.getScore() + getQuestions().get(getIndexQuestion() - 1).getAnswerScore()); //Sum puntos
+        player.setUserName(userNameLabel.getText()); // Trae el nombre de usuario
+        score.setText(player.getScore() + ""); // Configura nuevo valor en Vista puntos
     }
 
+    /**
+     * Geter de player
+     */
     public Player getPlayer() {
         return player;
     }
 
+    /**
+     * Función para configurar el jugador
+     */
     public void setPlayer(Player player) {
         this.player = player;
     }
 
+    /**
+     * Función que retorna el índice de la pregunta
+     */
     public int getIndexQuestion() {
         return indexQuestion;
     }
 
+    /**
+     * Función para configurar el índice de las preguntas
+     */
     public void setIndexQuestion(int indexQuestion) {
         this.indexQuestion = indexQuestion;
     }
 
+    /**
+     * Función que retorna la lista de preguntas
+     */
     public List<Question> getQuestions() {
         return questions;
     }
 
+    /**
+     * Función para configurar preguntas
+     */
     public void setQuestions(List<Question> questions) {
         this.questions = questions;
     }
 
+    /**
+     * Función limpiadora de opciones de pregunta: Setea todo en 'null'
+     */
     private void clear() {
         option1.setOnAction(null);
         option2.setOnAction(null);
@@ -184,8 +248,11 @@ public class SecondSceneController implements Initializable {
         option4.setOnAction(null);
     }
 
+    /**
+     * Función para declarar por terminada la partida
+     */
     private void endGame() {
-        clear();
+        clear(); // Limpia las opciones en las preguntas
         URL url;
         try {
             url = new File(ConstantsUtility.SCORE_SCENE).toURI().toURL();

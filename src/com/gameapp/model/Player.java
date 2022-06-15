@@ -5,8 +5,14 @@
 package com.gameapp.model;
 
 /**
+<<<<<<< HEAD
  * Creación de la clase jugador "public class Player {}" después de la llave abierta 
  * { crearemos sus atributos y métodos y terminaremos al cerrar la llave }
+=======
+ * Esta clase represnta un jugador con los atributos nombre de usuario, puntaje acumulado y última pregunta contestada correctamente
+ * @author arley
+ * @version 2.0
+>>>>>>> 02-SecondScene-Constants
  */
 public class Player {//llave de apertura de la Clase Player
 
@@ -46,6 +52,7 @@ public class Player {//llave de apertura de la Clase Player
         this.userName = userName;
         this.score = score;
         this.lastIndex = lastIndex;
+<<<<<<< HEAD
         /** 
         * en varias lineas del código para dentro de los metodos get y set se usa la palabra clave this, que en java 
 	* sirve para eliminar la ambiguedad y hacer referencia al objeto actual cuyo método esta siendo invocado; 
@@ -61,6 +68,14 @@ public class Player {//llave de apertura de la Clase Player
      * public es el modificador del método que indica que lo podemos mostrar o modificar desde fuera de la clase
      */ 
     public String getUserName() {//llave de apertura del método getUserName()
+=======
+    }
+/**
+ * 
+ * @return 
+ */
+    public String getUserName() {
+>>>>>>> 02-SecondScene-Constants
         return userName;
     }//llave de cierre del método getUserName()
 
